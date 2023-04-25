@@ -2,9 +2,9 @@ const States = require('../model/States');
 
 const createFunFact = async (req, res) => {
     if (!req?.body?.funfacts) {
-        return res.status(400).json({ 'message': 'State Fun Facts value required'});
+        return res.status(400).json({ 'message': 'State fun facts value required'});
     } else if (!Array.isArray(req.body.funfacts)) {
-        return res.status(400).json({ 'message': 'State Fun Facts value must be an array' });
+        return res.status(400).json({ 'message': 'State fun facts value must be an array' });
     } else 
     try{
         
@@ -21,7 +21,7 @@ const createFunFact = async (req, res) => {
 
 const deleteFunFact = async (req, res) => {
     if(!req?.body?.index) {
-        return res.status(400).json({ 'message': 'State Fun Fact index value required' });
+        return res.status(400).json({ 'message': 'State fun fact index value required' });
     }
 
     try{
@@ -70,7 +70,7 @@ const updateFunFact = async (req, res) => {
         const facts = await States.findOne({stateCode: res.state.code}, 'funfacts').exec();
     
         if(facts === null) {
-            return res.status(404).json({ 'message': `no fun facts found for ${res.state.state}` });
+            return res.status(404).json({ 'message': `No Fun Facts found for ${res.state.state}` });
         }
 
         const result = await States.findOneAndUpdate(
