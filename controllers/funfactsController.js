@@ -81,7 +81,7 @@ const updateFunFact = async (req, res) => {
         );
 
         if(result === null) {
-            return res.status(404).json({ 'message': `'No Fun Fact found at that index for ${res.state.state}` });
+            return res.status(404).json({ 'message': `No Fun Fact found at that index for ${res.state.state}` });
         } else {
             res.status(201).json(result);
         }
