@@ -28,8 +28,8 @@ const getOneState = async (req, res) => {
 };
 
 const getCapital = async (req, res) => {
-    const state = await res.state.stat;
-    const capital = await res.state.capital_city;
+    const state = res.state.stat;
+    const capital = res.state.capital_city;
     res.json({ state, capital });
 };
 
