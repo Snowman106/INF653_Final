@@ -10,7 +10,7 @@
   "author": "Justin Snowden",
   "license": "ISC",
   "engines": {
-    "node": "14.x"
+    "node": "16.x"
   },
   "dependencies": {
     "bcrypt": "^5.0.1",
