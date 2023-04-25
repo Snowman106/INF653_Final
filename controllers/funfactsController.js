@@ -92,7 +92,7 @@ const updateFunFact = async (req, res) => {
 
 const getRandomFunFact = async (req, res) => {
     const result = await States.findOne({stateCode: res.state.code}, 'funfacts').exec();
-    if(!result || result === null) {
+    if(!result) {
         return res.status(404).json({ "message": `No Fun Facts found` });
     }
     const factArray = result.funfacts;
